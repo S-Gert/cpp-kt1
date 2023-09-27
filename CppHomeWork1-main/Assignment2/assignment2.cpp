@@ -12,8 +12,8 @@ bool RG::Homework1::assignment2()
     long double d{4.5l};
     char8_t c{u8'd'};
     std::u8string s{u8"Hello World!"s};
-    std::vector v{1, 2, 3, 4, 5};
-    std::array a{2, 3, 7, 5, 6};
+    std::vector<int> v{1, 2, 3, 4, 5};
+    std::array<int, 5> a{2, 3, 7, 5, 6};
 
     // Muuda muutuja i1 väärtus 4-ks
     i1 = 4;
@@ -26,9 +26,9 @@ bool RG::Homework1::assignment2()
     // Muuda muutuja s väärtus enda nimeks
     s = 's';
     // Muuda muutuja v väärtus {5, 4, 3, 2, 1}-ks
-    std::vector v{5, 4, 3, 2, 1};
+    v = {5, 4, 3, 2, 1};
     // Muuda muutuja a.at(2) väärtus i1-ks
-
+    a[2] = i1;
     // Kontroll, et muutujad on õiget tüüpi ja väärtusega
     return (i1 == 4)
     && (i2 == 8ll)
@@ -38,4 +38,3 @@ bool RG::Homework1::assignment2()
     && (v == (std::vector{5, 4, 3, 2, 1}))
     && (a == (std::array{2, 3, 4, 5, 6}));
 }
-
